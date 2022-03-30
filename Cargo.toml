@@ -5,5 +5,15 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[dependencies.bevy]
+bevy = {version = "0.6", features = ["dynamic",  "trace", "render", "bevy_winit", "bevy_gilrs", "png", "hdr", "filesystem_watcher", "x11" ]}
+
+[dependencies.bevy_kira_audio]
+version = "0.8"
+features = [
+  "wav"
+]
+
 [dependencies]
-bevy = {version = "0.6", features = ["dynamic"]}
+bevy-inspector-egui = "0.7"
+rand = "0.8" # Same version as bevy
